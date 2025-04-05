@@ -1,0 +1,9 @@
+.venv/
+.vscode/
+temp/
+storage/
+einsatz*/
+configs/.env
+configs/user_seed.json
+*.tar.gz
+/.env
