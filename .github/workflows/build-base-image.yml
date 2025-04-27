@@ -42,7 +42,7 @@ jobs:
         with:
           context: .
           push: true
-          file: Dockerfile_base
+          file: Dockerfile
           build-args: |
             PHP_VERSION=${{ env.PHP_VERSION }}
           tags: |

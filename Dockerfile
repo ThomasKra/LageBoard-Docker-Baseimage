@@ -16,7 +16,7 @@ RUN a2enmod rewrite deflate http2 && a2enconf gzip http2
 
 # Installiere notwendige Pakete für PHP-Erweiterungen sowie mysqldump
 RUN apt update && apt install -y libzip-dev libpq-dev zlib1g-dev libonig-dev mariadb-client\
-    && docker-php-ext-install pdo pdo_mysql && \
+    && docker-php-ext-install pdo pdo_mysql sysvsem && \
     apt install -y libzip-dev libpq-dev zlib1g-dev libonig-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
