@@ -89,9 +89,9 @@ update_env_value "APP_DEBUG" "false"
 echo "Ersetze localhost-URLs in den Build-Assets"
 replace_localhost_url_in_build_assets
 # Pfad zu pdflatex anpassen
-update_env_value "EINSATZVERWALTUNG_PDFLATEX_PATH" "/usr/bin/"
+update_env_value "LAGEBOARD_PDFLATEX_PATH" "/usr/bin/"
 # Pfad zu mysqldump anpassen
-update_env_value "EINSATZVERWALTUNG_MYSQLDUMP_PATH" "/usr/bin/"
+update_env_value "LAGEBOARD_MYSQLDUMP_PATH" "/usr/bin/"
 
 
 echo "Artisan: optimize"

@@ -46,8 +46,8 @@ jobs:
           build-args: |
             PHP_VERSION=${{ env.PHP_VERSION }}
           tags: |
-            tkrauseiuk/einsatzleitsoftware_base:latest
-            tkrauseiuk/einsatzleitsoftware_base:${{ env.PHP_VERSION }}
+            tkrauseiuk/lageboard_base:latest
+            tkrauseiuk/lageboard_base:${{ env.PHP_VERSION }}
           platforms: linux/amd64,linux/arm64,linux/arm/v7
-          cache-from: type=registry,ref=tkrauseiuk/einsatzleitsoftware_base:latest
+          cache-from: type=registry,ref=tkrauseiuk/lageboard_base:latest
           cache-to: type=inline
