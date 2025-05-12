@@ -88,11 +88,16 @@ update_env_value "APP_DEBUG" "false"
 # Funktion aufrufen
 echo "Ersetze localhost-URLs in den Build-Assets"
 replace_localhost_url_in_build_assets
-# Pfad zu pdflatex anpassen
-update_env_value "LAGEBOARD_PDFLATEX_PATH" "/usr/bin/"
-# Pfad zu mysqldump anpassen
-update_env_value "LAGEBOARD_MYSQLDUMP_PATH" "/usr/bin/"
 
+# Pfad zu pdflatex ohne Dateinamen ermitteln
+pdflatex_path=$(dirname "$(command -v pdflatex)")
+# Pfad zu pdflatex anpassen
+update_env_value "LAGEBOARD_PDFLATEX_PATH" "$pdflatex_path/"
+
+# Pfad zu pdflatex ohne Dateinamen ermitteln
+mysqldump_path=$(dirname "$(command -v mysqldump)")
+# Pfad zu mysqldump anpassen
+update_env_value "LAGEBOARD_MYSQLDUMP_PATH" "$mysqldump_path/"
 
 echo "Artisan: optimize"
 php artisan optimize
