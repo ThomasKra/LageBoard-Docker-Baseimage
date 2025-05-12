@@ -58,7 +58,8 @@ RUN apt update && apt install -y wget perl xz-utils fontconfig && \
     tlmgr install latex latex-bin koma-script babel-german makecell ragged2e eurosym xcolor multirow lastpage tcolorbox pdfcol tikzfill && \
     TEXLIVE_DISTPATH=$(find /usr/local/texlive/ -type d -path "*/texmf-dist" -print -quit) && \
     # remove documentation and source files
-    rm -rf $TEXLIVE_DISTPATH/doc $TEXLIVE_DISTPATH/source
+    rm -rf $TEXLIVE_DISTPATH/doc $TEXLIVE_DISTPATH/source && \
+    tlmgr path add
     
 ENV ENV="/etc/profile"
 
