@@ -55,7 +55,7 @@ RUN apt update && apt install -y wget perl xz-utils fontconfig && \
     tlmgr option docfiles 0 && \
     tlmgr option srcfiles 0 && \
     tlmgr option autobackup 0 && \
-    tlmgr install latex latex-bin koma-script babel-german makecell ragged2e eurosym xcolor multirow lastpage tcolorbox pdfcol tikzfill && \
+    tlmgr install latex latex-bin koma-script babel-german babel-english hyperref geometry grfext fancyhdr epstopdf epstopdf-pkg makecell ragged2e eurosym xcolor multirow lastpage tcolorbox pdfcol tikzfill && \
     TEXLIVE_DISTPATH=$(find /usr/local/texlive/ -type d -path "*/texmf-dist" -print -quit) && \
     # remove documentation and source files
     rm -rf $TEXLIVE_DISTPATH/doc $TEXLIVE_DISTPATH/source && \
